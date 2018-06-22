@@ -1,4 +1,4 @@
-# Shoptet "api" microsite template
+# Shoptet "MyShoptet" microsite template
 
 ## Prerequisities
 
@@ -13,7 +13,7 @@
 - `cd shoptet-wp-theme`
 - `git submodule init`
 - `git submodule update`
-- `git clone git@github.com:Shoptet/microsite-api.git src`
+- `git clone git@github.com:Shoptet/microsite-myshoptet.git src`
 - `cd src`
 - `npm install` - only for first time
 - `grunt` - enable watch mode for SCSS & JS files
@@ -35,7 +35,7 @@ git@github.com:Shoptet/microsite-styles.git or
 git@github.com:Shoptet/shoptet-wp-theme.git
 
 ## Design guide
-See `shoptet-wp-theme/scaffolding/index.html` 
+See `shoptet-wp-theme/scaffolding/index.html`
 
 
 

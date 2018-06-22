@@ -1,6 +1,148 @@
 $fa-font-path: "../../../scaffolding/vendor/fa/webfonts";
 $claim-bg-image: url('../img/claim.png');
 $colorbox-path: "../../../scaffolding/img/colorbox/";
+$image-offset-size: 50px;
+$ol-list-size: 40px;
 
 @import "../../scaffolding/shoptet";
+@import "../../scaffolding/vendor/bs/scss/utilities/display";
+@import "../../scaffolding/vendor/bs/scss/utilities/flex";
+@import "../../scaffolding/vendor/bs/scss/utilities/spacing";
 @import "modules/variables";
+
+/* OVERRIDES */
+body {
+    background-color: #fff;
+}
+
+#navigation {
+    border-bottom: 1px solid  $border-color;
+}
+
+.header-search {
+    display: none;
+    visibility: hidden;
+}
+
+/* SECTIONS */
+.section-tertiary {
+    background-color: #f2f6de;
+}
+
+.offset-images {
+    margin-top: (2 * $image-offset-size);
+    margin-bottom: (2 * $image-offset-size);
+    padding: 0;
+
+    @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
+        margin-top: ($image-offset-size);
+        margin-bottom: ($image-offset-size);
+    }
+
+    @media (max-width: map-get($grid-breakpoints, 'sm') - 1) {
+        margin-top: ($image-offset-size / 2);
+        margin-bottom: ($image-offset-size / 2);
+    }
+
+    .offset-images-content {
+
+        p {
+            margin-top: -($image-offset-size);
+            margin-bottom: -($image-offset-size);
+            padding: 0;
+            min-width: 0;
+
+            @media (max-width: map-get($grid-breakpoints, 'lg') - 1) {
+                margin-top: -($image-offset-size / 2);
+                margin-bottom: -($image-offset-size / 2);
+                padding-left: 5px;
+                padding-right: 5px;
+                &:first-child {
+                    padding-left: 0px;
+                }
+                &:last-child {
+                    padding-right: 0px;
+                }
+
+            }
+
+            @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
+                margin-top: -($image-offset-size / 2);
+                margin-bottom: -($image-offset-size / 2);
+            }
+
+            @media (max-width: map-get($grid-breakpoints, 'sm') - 1) {
+                margin-top: -($image-offset-size / 3);
+                margin-bottom: -($image-offset-size / 3);
+            }
+        }
+
+    }
+}
+
+.tutorial-list {
+    ol {
+        counter-reset: shp-counter;
+        list-style: none;
+        padding-left: 0;
+        margin-top: 20px;
+    }
+    ol li {
+        margin: 0 0 2rem 0;
+        counter-increment: shp-counter;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
+            flex-wrap: wrap;
+            flex-flow: column;
+            justify-content: center;
+        }
+
+        img {
+            margin-left: auto;
+            padding-left: 15px;
+            flex: 0 0 auto;
+
+            @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
+                margin: 15px auto 0;
+                padding: 0;
+            }
+        }
+
+    }
+    ol li::before {
+        content: counter(shp-counter);
+        color: #000;
+        font-weight: bold;
+        top: 0;
+        background: #e7f7fd;
+        border-radius: 50%;
+        text-align: center;
+        width: $ol-list-size;
+        height: $ol-list-size;
+        line-height: $ol-list-size;
+        display: block;
+        flex: 0 0 auto;
+        margin-right: 15px;
+
+        @media (max-width: map-get($grid-breakpoints, 'md') - 1) {
+            margin: 0 auto 5px;
+            padding: 0;
+        }
+    }
+}
+
+/* HELPERS */
+.children-mx-20 > * {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.anchor {
+    position: relative;
+    top: -60px;
+}
+
+
+
