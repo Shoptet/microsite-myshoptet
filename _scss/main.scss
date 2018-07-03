@@ -1,13 +1,13 @@
-$fa-font-path: "../../../scaffolding/vendor/fa/webfonts";
-$claim-bg-image: url('../img/claim.png');
-$colorbox-path: "../../../scaffolding/img/colorbox/";
 $image-offset-size: 50px;
 $ol-list-size: 40px;
 
-@import "../../scaffolding/shoptet";
-@import "../../scaffolding/vendor/bs/scss/utilities/display";
-@import "../../scaffolding/vendor/bs/scss/utilities/flex";
-@import "../../scaffolding/vendor/bs/scss/utilities/spacing";
+@import "../../scaffolding/shoptet/variables-bootstrap";
+@import "../../scaffolding/vendor/bs/scss/functions";
+@import "../../scaffolding/vendor/bs/scss/variables";
+@import "../../scaffolding/shoptet/variables-shoptet";
+@import "../../scaffolding/vendor/bs/scss/mixins";
+
+
 @import "modules/variables";
 
 /* OVERRIDES */
